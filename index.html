@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Hover Display</title>
+	<link rel="stylesheet" href="styles/hover_animate.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+	<header>
+		<h1>hoverDisplay.js</h1>
+	</header>
+	<main>
+		<section class="demo-elements clearfix">
+			<h2>Use With HTML Elements</h2>
+			<div class="col">
+				<h3>Blocks</h3>
+				<div class = "hoverContainer">
+					<div class="circleBox circleBox1 hoverMe"></div>
+					<div class="hoverInfo info info1">
+						<p>I've got some mighty-fine text for you, baby.</p>
+					</div>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nam blanditiis, saepe deleniti! Consequatur ex dignissimos quia animi vitae dolorem cumque laborum dicta harum in recusandae illum porro ipsam, aspernatur iusto dolores nam qui eius accusamus eaque nesciunt, temporibus mollitia. Perspiciatis, perferendis. Quas perferendis, est consequatur reprehenderit, adipisci vel! Voluptate voluptatibus, odio alias quos nobis nostrum amet iste repellat, velit cupiditate, ab dolorem rem nisi praesentium corrupti, fugiat odit dolorum est aspernatur ratione ullam perspiciatis. Molestias soluta quis sequi illo quae dolore amet optio, sit, assumenda animi necessitatibus quaerat recusandae earum at provident suscipit? Id ut quos ipsa nostrum accusantium?</p>
+			</div>
+			<div class="col">
+				<h3>Inline Blocks</h3>
+					<div class="hoverContainer">
+						<figure class="hoverMe">
+							<img src="assets/images/WC2_4725.jpg" alt="">
+						</figure>
+						<div class="hoverInfo info info2">
+							<p>Rob Ford during a mayoralty debate at Ryerson University, March 3, 2015.</p>
+						</div>
+					</div>
+			</div>
+		</section>
+		<section class="demo-abs clearfix">
+			<h2>Use With Positioning</h2>
+			<img src="assets/images/20150113_BG_Beta_Jan13-21.jpg" alt="">
+			<div class="hoverContainer-abs feature1">
+				<div class="circle-small hoverMe"></div>
+				<div class="hoverInfo caption caption1">
+					<h4>Weapon of Choice</h4>
+					<p>Multi-purpose gun with 3-fire modes, integrated holographic sight and OLED display.</p>
+				</div>
+			</div>
+			<div class="hoverContainer-abs feature2">
+				<div class="circle-small hoverMe"></div>
+				<div class="hoverInfo caption caption2">
+					<h4>Hit Detection</h4>
+					<p>Customized MOLLE tactical vests with hit-detection sensors</p>
+				</div>
+			</div>
+		</section>
+		<section class="readme">
+			<h2>Documentation</h2>
+			<ol>
+				<li><p>Link hoverDisplay.js and hover_animate.css in your HTML file.</p></li>
+				<li><p>Add class 'hoverMe' to desired trigger elements</p></li>
+				<li><p>Add div class 'hoverInfo' as a sibling to 'hoverMe'. You can include as much or as little information in 'hoverInfo'.</li>
+				<li>
+					<p>Wrap 'hoverMe' and 'hoverInfo' in a 'hoverContainer' or 'hoverContainer-abs' div. Use the latter if you wish to position your elements via CSS positioning.</p>
+				</li>
+				<li><p>You choose intro/outro options utilizing existing built-in animations and speed settings.</p></li>
+				<li>
+					<p>In your Javascript file, include the following code to call the function.
+<pre><code>
+$(function() {
+	var settings = {
+		intro: "fadeIn",
+		outro: "fadeOut",
+		moveY: 0,
+		moveX: 0,
+		speed: "slow"
+	}
+
+	$( ".hoverMe" ).hoverDisplay(settings);
+});
+</code></pre></li>
+			</ol>
+		</section>
+		<section class="versionHistory">
+			<h2>Version History and Updates</h2>
+			<ul>
+				<li><p>0.1: Initial Build</p></li>
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>Built by Winston Chow<p>
+		<p>CSS animations in hover_animate.css courtesy Animate.css creator Daniel Eden.</p>
+		<p>View on <a href="#">Github</a></p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="scripts/jquery.hoverDisplay.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+
+</html>
